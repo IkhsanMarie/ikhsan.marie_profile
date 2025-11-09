@@ -1,0 +1,47 @@
+:root{
+--bg:#f6f7fb;
+--card:#ffffff;
+--text:#1f2937;
+--accent:#2563eb;
+--muted:#6b7280;
+}
+*{box-sizing:border-box}
+body{font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; background:var(--bg); color:var(--text); line-height:1.5}
+.container{max-width:1000px;margin:0 auto;padding:20px}
+.header-inner{display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:1.25rem;margin:0}
+.nav a{margin-left:16px;text-decoration:none;color:var(--text);padding:6px 8px;border-radius:6px}
+.nav a:hover{background:rgba(37,99,235,0.08);color:var(--accent)}
+.site-header{background:transparent;padding:14px 0}
+.hero{display:flex;gap:24px;align-items:center;padding:40px 0}
+.profile-pic{width:160px;height:160px;object-fit:cover;border-radius:12px;box-shadow:0 6px 18px rgba(31,41,55,0.06)}
+.hero-right h2{margin-top:0}
+.accent{color:var(--accent)}
+.btn{display:inline-block;padding:10px 14px;border-radius:10px;background:var(--accent);color:white;text-decoration:none;border:none;cursor:pointer}
+.btn-outline{background:transparent;border:1px solid rgba(37,99,235,0.18);color:var(--accent)}
+.btn:hover{opacity:0.95;transform:translateY(-2px)}
+.clock{margin-top:12px;color:var(--muted)}
+.site-footer{padding:18px 0;margin-top:40px;border-top:1px solid rgba(31,41,55,0.06)}
+.content h2{margin-top:0}
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:20px;align-items:center}
+.bio-table{width:100%;border-collapse:collapse}
+.bio-table th{text-align:left;padding:8px;color:var(--muted);width:140px}
+.bio-table td{padding:8px}
+.about-img{width:100%;border-radius:8px}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.project-card{background:var(--card);padding:12px;border-radius:10px;box-shadow:0 6px 18px rgba(31,41,55,0.04)}
+.project-card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.contact-form{max-width:640px;display:flex;flex-direction:column;gap:10px}
+.contact-form input,.contact-form textarea{padding:10px;border-radius:8px;border:1px solid rgba(31,41,55,0.08)}
+.contact-form button{width:140px}
+
+
+/* Dark theme (toggle) */
+body.dark{--bg:#0f51d5;--card:#0f1724;--text:#e6eef8;--accent:#60a5fa;--muted:#9aa6b2}
+
+
+/* Responsive */
+@media (max-width:800px){
+.hero{flex-direction:column;text-align:center}
+.about-grid{grid-template-columns:1fr}
+}
